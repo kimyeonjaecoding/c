@@ -1,0 +1,49 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int main()
+{	srand(time(NULL));
+	int n=1;
+	int a;
+	int b;
+	int c;
+	while (1)
+	{
+		//새로운 문제 출제n이 1일 경 우 
+		if(n==1)
+		{
+		
+			a=rand()%1000;
+			b=rand()%1000;
+		}
+			
+	printf("%d+%d=",a,b);
+	scanf("%d",&c);
+		
+		if(c==a+b)
+		{
+			n=1; //답을 맞추면 새로운 문제 제시  
+		}
+		else
+		{
+			n=0;
+		}
+	}
+		return 0;
+}
+	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
