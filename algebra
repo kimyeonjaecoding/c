@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<time.h>
+#include <windows.h> 
+
+int main()
+{
+	system("title ALGEBRA_yeonjae"); 
+	system("mode con: cols=50 lines=40") ;
+	system("color 06");
+	 
+	srand(time(NULL));
+	int A[100];
+	int B[100];
+	int C[100]; //사용자가 입력한 답 저장  
+	int D[100];  // o,x 저 장  
+	
+	int a=rand()%1000;
+	int b=rand()%1000;
+	int c;
+	int d;
+	int e;
+	printf("3 자리수 암산 문제 입니다.\n");
+	printf("1문제부터 10문제까지 가능합니다.\n");
+	printf("몇문제 푸시겠습니까?\n"); 
+	scanf("%d",&d); 
+	
+	//start game
+	for (int i=0;i<d;i++)
+	{
+		printf("%d+%d=",a,b);
+		scanf("%d",&c);
+		
+		if (c==a+b)
+			{e= 1;	}
+		else { e=2;	}
+		
+		
+		A[i] = a;
+		B[i] = b;
+		C[i] = c;
+		D[i] = e;
+		a=rand()%1000;
+		b=rand()%1000;
+	
+	}	
+		//  reporting
+		system("color 04");
+		for (int i=0;i<d;i++)
+		{
+			printf("\n%d+",A[i]);	
+			printf("%d=",B[i]);
+			printf("%d",C[i]);
+			
+			
+			
+			if (D[i] == 1)
+			{
+				printf("(O)\n\n");
+			}
+			else 
+			{
+				printf("(X)\n\n");
+			}
+	
+		}
+	
+	
+	
+	
+	return 0;
+}
