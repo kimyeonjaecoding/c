@@ -1,0 +1,96 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int main()
+{
+	srand(time(NULL));
+	
+	int a = rand()%10;
+	int b = rand()%10;
+	int c = rand()%10;
+	
+	
+	while (1)
+	{
+	if ( a == b )
+	{
+		
+		a = rand()%10;
+	}
+	if ( a==c)
+	{	
+		a = rand()%10;
+	}
+		
+	else {	printf("%d\n",a); break;}
+	}
+
+
+
+
+
+while (1)
+	{
+	if ( a == b )
+	{
+		
+		 b = rand()%10;
+	}
+	if ( b==c)
+	{	
+		 b = rand()%10;
+	}
+		
+	else {	printf("%d\n",b); break;}
+	}	
+
+
+	
+	
+	while (1)
+	{
+	if ( a == c )
+	{
+		
+		c = rand()%10;
+	}
+	if ( b==c)
+	{	
+		c = rand()%10;
+	}
+		
+	else {	printf("%d\n",c); break;}
+	}
+
+
+
+return 0;
+}
+
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int main()
+{
+	srand(time(NULL));
+	
+	int a = rand()%10;
+	int b = rand()%10;
+	int c = rand()%10;
+	
+	do{
+	a = rand()%10;
+	b = rand()%10;
+	c = rand()%10;
+	 
+}
+	while(a==b||a==c||c==b);
+	
+	 printf("%d\n",a);
+	 printf("%d\n",b);
+	 printf("%d\n",c);
+return 0;}
+
