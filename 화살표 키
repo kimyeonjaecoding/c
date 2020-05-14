@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <conio.h>
+#include <windows.h>
+
+int main()
+{
+	int a;
+	int b;
+	
+	while(1)
+	{
+		a = getch();
+		if (a==224){
+			a = getch();
+		switch(a){
+			case 75:printf("LEFT"); break;
+			case 77:printf("RIGHT"); break;
+			case 72:printf("UP"); break;
+			case 80:printf("DOWN"); break;
+		}
+		printf("\n");
+	}
+	
+}
+return 0;
+}
