@@ -1,0 +1,152 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int a;
+int b;
+int c;
+
+int choose3num()
+{
+
+	
+	while(1)
+	{
+		if (a==b)
+	{
+			a = rand()%10;
+	}
+		if (a==c)
+	{
+			a = rand()%10;
+	}
+		
+		
+		else
+	{
+		break;
+	}
+		
+		
+		 
+	}
+	
+	
+	
+	
+	while(1)
+	{
+		if (a==b)
+		{
+			b = rand()%10;
+		}
+		if (b==c)
+		{
+			b = rand()%10;
+		}
+		
+		else
+	{
+		 break;
+	}
+	
+	
+	}
+	
+	
+	while(1)
+	{
+		if (a==c)
+		{
+			c = rand()%10;
+		}
+		if (b==c)
+		{
+			c = rand()%10;
+		}
+		
+		
+		else
+	{
+		break;
+	}
+		
+		
+		
+		
+	}
+	
+//	printf("%d%d%d",a,b,c);
+
+
+
+	return 0;
+	
+}
+
+
+
+int main()
+{
+ 	srand(time(NULL));
+ 	 	
+	int aa,bb,cc;
+	int S=0,B=0,O=0;
+	
+	a = rand()%10; // 0~9
+	b = rand()%10;
+	c = rand()%10;
+	
+
+	choose3num();
+	
+	printf("answer is %d %d %d\n", a,b,c);
+	
+	
+	for (int i=0;i<5;i++)
+	{
+		scanf("%d %d %d", &aa,&bb, &cc);
+		
+		 //check ans
+		 
+		 if ( aa==a&& bb==b&&cc==c)
+		 {
+		 printf("오오오오오오\n"); break;
+		 }
+		  
+		if (aa==a)
+		{	S=S+1; }
+		else if (aa==b)
+		{ 	B=B+1;	}
+		else if (aa==c)	{ B=B+1;}
+		else { 	O=O+1; }
+		
+		
+		
+		if (bb==b)
+		{	S=S+1; }
+		else if (bb==a)
+		{ 	B=B+1;	}
+		else if (bb==c)	{ B=B+1;}
+		else { 	O=O+1; }
+		
+		
+		
+		
+		if (cc==c)
+		{	S=S+1; }
+		else if (cc==b)
+		{ 	B=B+1;	}
+		else if (cc==a)	{ B=B+1;}
+		else { 	O=O+1; }
+		printf("s:%d b:%d o:%d\n", S,B,O);
+		S=0;
+		B=0;
+		O=0;
+		
+		
+	}		
+			
+return 0;		
+	
+	}
