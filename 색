@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <windows.h>
+
+
+
+
+
+
+
+
+
+int main(void)
+{
+
+int fontColor( int cN)
+{
+	
+		SetConsoleTextAttribute( GetStdHandle( STD_OUTPUT_HANDLE), cN);
+	
+	
+	
+	return 0;
+}
+
+	fontColor(4);
+	printf("%s","hello\n");
+	
+	fontColor(8);
+	printf("%s","hello\n");
+	
+	return 0;
+}
