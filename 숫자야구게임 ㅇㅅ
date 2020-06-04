@@ -1,0 +1,216 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+#include <windows.h>
+int a;
+int b;
+int c;
+
+
+  
+  
+int fontColor( int cN)
+{
+	
+		SetConsoleTextAttribute( GetStdHandle( STD_OUTPUT_HANDLE), cN);
+	
+	
+	
+	return 0;
+}
+
+ 
+int choose3num()
+{
+
+
+	
+
+
+	while(1) //숫자고르기 - a 
+	{
+		if (a==b)
+	{
+			a = rand()%10;
+	}
+		if (a==c)
+	{
+			a = rand()%10;
+	}
+
+
+		else
+	{
+		break;
+	}
+
+
+
+	}
+
+
+
+
+	while(1)	//숫자고르기 - b
+	{
+		if (a==b)
+		{
+			b = rand()%10;
+		}
+		if (b==c)
+		{
+			b = rand()%10;
+		}
+
+		else
+	{
+		 break;
+	}
+
+
+	}
+
+
+	while(1)	//숫자고르기 - c 
+	{
+		if (a==c)
+		{
+			c = rand()%10;
+		}
+		if (b==c)
+		{
+			c = rand()%10;
+		}
+
+
+		else
+	{
+		break;
+	}
+
+
+
+
+	}
+
+//	printf("%d%d%d",a,b,c);
+
+
+
+	return 0;
+
+}
+
+
+
+int main()
+{
+		system("title 숫자야구게임");
+	system("mode con: cols=40 lines=20"); 
+  
+ 	srand(time(NULL));
+
+	int aa,bb,cc;
+	int S=0,B=0,O=0;
+	int n=0;
+	int p=0;
+	
+	a = rand()%10; // 0~9 	//choose3num()에서 실행할 랜덤 수 만들기  
+	b = rand()%10;
+	c = rand()%10;
+	
+	
+
+	choose3num();
+	
+	
+	
+	
+
+	
+
+
+	
+	
+
+	fontColor(11 );
+	
+	printf("%s","[숫자"); 
+	
+	fontColor(14);
+	
+	printf("%s","야구");
+	
+	fontColor(15);
+	
+	printf("%s","게임]\n");
+	 
+ 	fontColor(7);
+	
+	printf("기회는 몇번할까요? ( 3 ~ 10 )\n") ; 
+	
+	scanf("%d", &n); // 기회 횟수  
+	
+	printf("기회는 %d번 입니다.\n",n); 
+	
+	printf("시작"); 
+
+	for (int i=0;i<n;i++) //기회 n 번  
+	{
+		fontColor(7);
+		scanf("%d %d %d", &aa,&bb, &cc);	//답 물어보기  
+		
+		p=p+1;
+		 if ( aa==a&& bb==b&&cc==c)	 	//check ans - 다 같으면  
+		 {	
+		 
+		 printf("우와 참 잘하셨어요\n"); break;
+		 }
+
+		if (aa==a)		//check ans - 하나씩 비교  
+		{	S=S+1; }
+		else if (aa==b)
+		{ 	B=B+1;	}
+		else if (aa==c)	{ B=B+1;}
+		else { 	O=O+1; }
+
+
+
+		if (bb==b)
+		{	S=S+1; }
+		else if (bb==a)
+		{ 	B=B+1;	}
+		else if (bb==c)	{ B=B+1;}
+		else { 	O=O+1; }
+
+
+
+
+		if (cc==c)
+		{	S=S+1; }
+		else if (cc==b)
+		{ 	B=B+1;	}
+		else if (cc==a)	{ B=B+1;}
+		else { 	O=O+1; }
+		
+		
+		fontColor(13);
+		printf("S:%d B:%d O:%d\n", S,B,O); // S,B,O 각각 알려주기  
+		
+		
+		
+		S=0;
+		B=0;
+		O=0;
+
+
+	}		
+
+if ( S == 3 ) 
+{
+	printf("%d번의 기회 중 %d번 만에 맞추셨습니다!!",n,p); 
+}
+	printf("answer is %d %d %d\n", a,b,c);  
+return 0;		
+
+	}
