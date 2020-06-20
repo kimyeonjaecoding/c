@@ -1,0 +1,156 @@
+#include<stdio.h>
+
+
+
+main()
+	  {	
+	int n;	
+	int s;
+	int i;
+	int j;
+	int u;
+	int h;
+	int g;
+	int a;
+	
+
+	int score[100]={0,};
+	
+	// 순위를 저장하는 배열  
+	int rank[100]={0,;}
+
+	printf("how many datas? (1~5)") ;
+	scanf("%d",&s); //몇개의 인덱스를 저장할지 묻기  
+
+	for (n=0;n<s;n++) // 스코어 안에 들어갈 수를 묻기  
+	{
+	scanf("%d",&score[n]);
+	}
+
+	//  rank
+	for (j=0;j<s;j++)
+	{	
+	
+		for (i=0;i<s;i++)
+	{
+		if ( score[i]>score[j])
+		{
+			//순위 올리기  
+		//	rank... i 나 j  
+			
+			
+		}
+		
+	}
+}
+	
+	
+/*			
+		for (a=1;a<5;a++)
+		{
+						
+			if (u==0)
+			{
+				printf("%d->%d등\n",score[i],s);
+			
+			}
+				else if (u==1)
+			{
+				printf("%d->%d등\n",score[i],s-1);
+			
+			}
+			else if (u==2)
+			{
+				printf("%d->%d등\n",score[i],s-2);
+			
+			}
+			else if (u==3)
+			{
+				printf("%d->%d등\n",score[i],s-3);
+			
+			}
+				else if (u==4)
+			{
+				printf("%d->%d등\n",score[i],s-4);
+			
+			}
+			
+	}		
+	
+		
+		
+*/		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+	/*
+
+
+	for (num=0;num<s;num++) // 물어본  숫자 프린트하기  
+ 	{
+	 printf("\n\n%d", score [num]);
+	}
+
+
+	*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+return 0;	
+
+}
