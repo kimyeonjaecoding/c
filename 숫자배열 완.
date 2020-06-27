@@ -1,0 +1,50 @@
+#include<stdio.h>
+
+
+
+main()
+	  {	
+	int n;	
+	int s;
+	int i;
+	int j;
+	int u;
+	int a;
+	
+	int score[100]={0,};
+
+	// 순위를 저장하는 배열  
+	int rank[100]={0,};
+
+	printf("how many datas? (1~5)") ;
+	scanf("%d",&s); //몇개의 인덱스를 저장할지 묻기  
+
+	for (n=0;n<s;n++) // 스코어 안에 들어갈 수를 묻기  
+	{
+	scanf("%d",&score[n]);
+	}
+
+	//  rank
+	for (j=0;j<s;j++)
+	{	
+
+		for (i=0;i<s;i++)
+	{
+		if (score[j]>=score[i])
+		{
+			//순위 올리기  
+		//	rank... i 나 j  
+			rank[j]=rank[j]+1;
+
+		}
+
+	}	
+	
+printf(" %d->%d\n ",score[j],rank[j]); //랭크(순위저장) 순위 프린트하기 
+
+
+}
+
+return 0;	
+
+}
