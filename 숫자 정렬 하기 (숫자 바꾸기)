@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main()
+{
+	
+	int score[5]={56,87,7,9,3};
+	
+	int n;
+
+//	scanf("%d",&score[3]);
+//	scanf("%d",&score[4]);
+	
+	//뒤의 값이 앞의 값보다 작으면 두수를 바꾼다.  
+	if (score[3]>score[4])
+	{
+		//두수의 차를 이용하여 바꾼다.  
+		 n = score[3]-score[4] ;
+		score[3]=score[3]-n;
+		score[4]=score[4]+n;
+	}
+	
+	printf("%d,%d",score[3],score[4]);
+	
+	
+	return 0 ;
+}
+		
