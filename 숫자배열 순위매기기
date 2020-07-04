@@ -1,0 +1,39 @@
+#include<stdio.h>
+
+main()
+{
+	int id;
+	int i;
+	int j;
+	int n;
+
+	int score[100] = {0,}; //값을 저장  
+	
+	int rank[100] = {0,}; //값의 순위를 저장  
+	
+	printf("몇개의 값을 저장할까요?(1~5)\n");
+	scanf("%d",& id); 
+	
+	for (i=0;i<id;i++) //값을 스코어에 넣기  
+	{
+		scanf("%d",&score[i]);
+	}
+	
+	for (j=0;j<id;j++) //구구단과 비슷한원리  
+	{
+		for (n=0;n<id;n++)
+		{
+			// 자신과 자신,자신과 그다음 식으로 비교한다   
+			if (score[j]<=score[n])
+   			{
+   				rank[j]=rank[j]+1; //자신보다 크거나 같으면 랭크(순위)에 1씩 더하기  
+   			}
+	}
+		printf("%d->%d\n",score[j],rank[j]); // 마지막으로 숫자와 순위 프린트 하기  
+		}
+	
+
+	
+
+	return 0 ;
+}
