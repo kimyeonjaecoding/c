@@ -1,0 +1,35 @@
+b = [   [1 ,2,3] , [4,5,6] , [7,8,0] ]
+print (b[0])
+print (b[1])
+print (b[2])
+
+x=2
+y=2
+while True:
+    h = input()
+    if h=='w' and x>0 :
+        b[x][y],b[x-1][y]=b[x-1][y],b[x][y]
+        x=x-1
+    
+    elif h=='s' and x<2 : 
+        b[x][y],b[x+1][y]=b[x+1][y],b[x][y]
+        x=x+1
+        
+    elif h=='a' and y>0 :
+        b[x][y],b[x][y-1]=b[x][y-1],b[x][y]
+        y=y-1
+
+    elif h=='d' and y<2 :
+        b[x][y],b[x][y+1]=b[x][y+1],b[x][y]
+        y=y+1
+
+
+        
+    print (b[0])
+    print (b[1])
+    print (b[2])
+    
+    if b == [   [1 ,2,3] , [4,5,6] , [7,8,0] ] :
+        print("정답입니다 잘 했어요...")
+        break
+    
